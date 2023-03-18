@@ -18,6 +18,7 @@ export default function Table({sortFrom, userList}) {
 		sortFrom('website') }}>Site</th>
 	<th onClick={() => { 
 		sortFrom('company.name') }}>Company</th>
+	<th>Удаление</th>	
 					</tr>
 				</thead>
 				<tbody>{userList.map((item => (
