@@ -1,10 +1,10 @@
-export default function Table({sortFrom, userList}) {
+export default function Table({numAscending,numDescending, strAscending, userList}) {
 	return <>
 		<div>
 			<table className='table'>
 				<thead>
 					<tr>
-	<th>Id</th>
+	<th onClick={numDescending}>Id</th>
 	<th>Name</th>
 	<th>Email</th>
 	<th>Address</th>
@@ -14,18 +14,22 @@ export default function Table({sortFrom, userList}) {
 	<th>Удаление</th>	
 					</tr>
 				</thead>
-				<tbody>{userList.map((item => (
-						<tr key={item.id}>
- 	<th>{item.id}</th>
-	<th>{item.username}</th>
-	<th>{item.email}</th>
-	<th>{item.address.city}</th>
-	<th>{item.phone}</th>
-	<th>{item.website}</th>
-	<th>{item.company.name}</th>
+				<tbody>{numDescending.map((userList => {
+					return(
+						<tr key={userList.id}>
+ 	<th>{userList.id}</th>
+	<th>{userList.username}</th>
+	<th>{userList.email}</th>
+	<th>{userList.address.city}</th>
+	<th>{userList.phone}</th>
+	<th>{userList.website}</th>
+	<th>{userList.company.name}</th>
 	<th><button className="close">X</button></th>
 		</tr>
-					)))}
+					)
+				}
+				))}
+
 				</tbody>
 			</table>
 		</div>

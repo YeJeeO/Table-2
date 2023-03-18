@@ -17,6 +17,20 @@ const fetchUserList = async() => {
   useEffect(() => {
     fetchUserList()
   }, [])
+
+//   function getFn(obj, fn) {
+// 	return fn(obj)
+//   }
+
+//   function sortArrayByFn(array, fn) {
+// 	return[...array.sort(
+// 		typeof fn(array[0]==='string'
+// 		? (a,b)=>fn(a).localeCompare(fn(b))
+// 		:(a,b)=>fn(a)-fn(b))
+// 	)
+// 	];
+//   }
+
 //разные виды сортировок
   const numAscending = [...userList].sort((a, b) => a.id - b.id);
   console.log(numAscending);
@@ -35,7 +49,7 @@ const fetchUserList = async() => {
   console.log(strDescending);
 	return <>
 		<div className='table-block'>
-			<Table userList={userList}/>
+			<Table userList={userList}  />
 		</div>
 	</>
 }
