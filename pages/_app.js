@@ -1,12 +1,11 @@
 import SortableTable from '../components/SortableTable'
-
+import "../style/style.css"
 
 const App = () => {
     return (
-        <div className="container is-fluid">
+        <div className="container">
         <h1 className="title mt-5">Сотрудники</h1>
-        
-        <SortableTable/>
+                <SortableTable/>
         </div>
     );
 };

@@ -4,20 +4,13 @@ export default function Table({sortFrom, userList}) {
 			<table className='table'>
 				<thead>
 					<tr>
-	<th onClick={() => { 
-		sortFrom('id') }}>Id</th>
-	<th onClick={() => { 
-		sortFrom('username') }}>Name</th>
-	<th onClick={() => { 
-		sortFrom('email') }}>Email</th>
-	<th onClick={() => { 
-		sortFrom('address.city') }}>Address</th>
-	<th onClick={() => { 
-		sortFrom('phone') }}>Phone</th>
-	<th onClick={() => { 
-		sortFrom('website') }}>Site</th>
-	<th onClick={() => { 
-		sortFrom('company.name') }}>Company</th>
+	<th>Id</th>
+	<th>Name</th>
+	<th>Email</th>
+	<th>Address</th>
+	<th>Phone</th>
+	<th>Site</th>
+	<th>Company</th>
 	<th>Удаление</th>	
 					</tr>
 				</thead>
