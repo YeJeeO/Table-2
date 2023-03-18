@@ -1,5 +1,6 @@
 import SortableTable from '../components/SortableTable'
 
+
 const App = () => {
     return (
         <div className="container is-fluid">

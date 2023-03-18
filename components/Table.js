@@ -1,23 +1,23 @@
-export default function Table({sort, userList}) {
+export default function Table({sortFrom, userList}) {
 	return <>
 		<div>
 			<table className='table'>
 				<thead>
 					<tr>
 	<th onClick={() => { 
-		sort('id') }}>Id</th>
+		sortFrom('id') }}>Id</th>
 	<th onClick={() => { 
-		sort('username') }}>Name</th>
+		sortFrom('username') }}>Name</th>
 	<th onClick={() => { 
-		sort('email') }}>Email</th>
+		sortFrom('email') }}>Email</th>
 	<th onClick={() => { 
-		sort('address.city') }}>Address</th>
+		sortFrom('address.city') }}>Address</th>
 	<th onClick={() => { 
-		sort('phone') }}>Phone</th>
+		sortFrom('phone') }}>Phone</th>
 	<th onClick={() => { 
-		sort('website') }}>Site</th>
+		sortFrom('website') }}>Site</th>
 	<th onClick={() => { 
-		sort('company.name') }}>Company</th>
+		sortFrom('company.name') }}>Company</th>
 					</tr>
 				</thead>
 				<tbody>{userList.map((item => (

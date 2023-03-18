@@ -4,23 +4,22 @@ import Table from './Table'
 
 
 export default function SortableTable() {
-	let sort;
+	
 	const jsonInfo = 'https://jsonplaceholder.typicode.com/users'
 	const [userList, setUserList] = useState([]);
 	const [sortMain, setSortMain] = useState([]);
 	const [searchValue, setSearchValue]=useState('');
-	const sortUsers = (field) => {
+	
+	function sortFrom (el) {
 	const newData = userList.concat();
+	let sortFrom;
 	if (sortMain) {
-		sort = newData.sort(
+		sortFrom = newData.sort(
 			(a, b) => { 
-				return a[field] > b[field] ? 1 : -1 }
+				return a[el] > b[el] ? 1 : -1 }
 		)
-		} sort = newData.reverse(
-			(a, b) => { return a[field] > b[field] ? 1 : -1 }
-		)
-
-		setUserList(sort);
+		} 
+		setUserList(sortFrom);
 		setSortMain(!sortMain);
 	}
 	useEffect(() => {
@@ -34,7 +33,7 @@ export default function SortableTable() {
 
 	return <>
 		<div className='table-block'>
-			<Table userList={userList} sort={sort} />
+			<Table userList={userList} sortFrom={sortFrom} />
 		</div>
 	</>
 }
