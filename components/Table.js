@@ -4,7 +4,7 @@ export default function Table({numAscending,numDescending, strAscending, userLis
 			<table className='table'>
 				<thead>
 					<tr>
-	<th onClick={numDescending}>Id</th>
+	<th onClick={()=>{sortArrayByFn('id')}}>Id</th>
 	<th>Name</th>
 	<th>Email</th>
 	<th>Address</th>
@@ -14,7 +14,7 @@ export default function Table({numAscending,numDescending, strAscending, userLis
 	<th>Удаление</th>	
 					</tr>
 				</thead>
-				<tbody>{numDescending.map((userList => {
+				<tbody>{userList.map((userList => {
 					return(
 						<tr key={userList.id}>
  	<th>{userList.id}</th>
@@ -35,3 +35,4 @@ export default function Table({numAscending,numDescending, strAscending, userLis
 		</div>
 	</>
 }
+//<th onClick={() => { sortUsers('id') }}>Id</th>

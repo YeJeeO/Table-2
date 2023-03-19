@@ -18,18 +18,19 @@ const fetchUserList = async() => {
     fetchUserList()
   }, [])
 
-//   function getFn(obj, fn) {
-// 	return fn(obj)
-//   }
+  function getFn(obj, fn) {
+	return fn(obj)
+  }
 
-//   function sortArrayByFn(array, fn) {
-// 	return[...array.sort(
-// 		typeof fn(array[0]==='string'
-// 		? (a,b)=>fn(a).localeCompare(fn(b))
-// 		:(a,b)=>fn(a)-fn(b))
-// 	)
-// 	];
-//   }
+  function sortArrayByFn(array, fn) {
+	return[...array.sort(
+		typeof fn(array[0]==='string'
+		? (a,b)=>fn(a).localeCompare(fn(b))
+		:(a,b)=>fn(a)-fn(b))
+	)
+	];
+  }
+
 
 //разные виды сортировок
   const numAscending = [...userList].sort((a, b) => a.id - b.id);
